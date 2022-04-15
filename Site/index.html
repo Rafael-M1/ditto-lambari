@@ -11,11 +11,19 @@
     
         <title>Restaurante</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".card").click(function(){
+                    $(this).hide();
+                });
+                $(".row.mt-1").click(function(){
+                    $(this).hide();
+                });
+                
+            });
+        </script>
     </head>
     <body>
-        <div class="container">
-
-        </div>
         <div class="container-fluid bg-light">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -48,13 +56,6 @@
                   </nav>
             </div>
         </div>
-        <script>
-            $(document).ready(function(){
-                $(".card").click(function(){
-                    $(this).hide();
-                });
-            });
-        </script>
         <div class="container">
             <div class="card mb-3 mt-3" style="max-width: auto;">
                 <div class="row no-gutters">
@@ -124,23 +125,29 @@
                     <div class="col-lg-3">
                         <h5>Redes Sociais:</h5>
                         <div class="container">
-                            <div class="row">
+                            <div class="row mt-1">
                                 <div class="col-2">
                                     <img src="/src/icone-facebook.png" alt="Ícone Facebook">
                                 </div>
-                                <div class="col-7">facebook.com/restaurante</div>
+                                <div class="col-7">
+                                    <a href="#">facebook.com/restaurante</a>
+                                </div>
                             </div>
                             <div class="row mt-1">
                                 <div class="col-2">
                                     <img src="/src/icone-instagram.png" alt="Ícone Instagram">
                                 </div>
-                                <div class="col-7">instagram.com/restaurante</div>
+                                <div class="col-7">
+                                    <a href="#">instagram.com/restaurante</a>
+                                </div>
                             </div>
                             <div class="row mt-1">
                                 <div class="col-2">
                                     <img src="/src/icone-twitter.png" alt="Ícone Twitter">
                                 </div>
-                                <div class="col-7">twitter.com/restaurante</div>
+                                <div class="col-7">
+                                    <a href="#">twitter.com/restaurante</a>
+                                </div>
                             </div> 
                         </div>
                     </div>
