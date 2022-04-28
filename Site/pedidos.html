@@ -391,9 +391,17 @@
             </div>
             <br>
         </div>
+        <div class="container">
+            <h4 class="texto-resultado"></h4>
+            <br>
+        </div>
        <script>
            $(document).ready(function(){
                 $(".botao-finalizar-pedido").click(function(){
+                    //$(".texto-resultado").text("");
+                    var soma_pratos = 0;
+                    var soma_bebidas = 0;
+                    var soma_sobremesa = 0;
                     var soma_pratos = parseFloat($(".card.pratos .preco").eq(0).text())*parseFloat($(".card.pratos input").eq(0).val())+
                     parseFloat($(".card.pratos .preco").eq(1).text())*parseFloat($(".card.pratos input").eq(1).val())+
                     parseFloat($(".card.pratos .preco").eq(2).text())*parseFloat($(".card.pratos input").eq(2).val())+
@@ -409,7 +417,8 @@
                     parseFloat($(".card.sobremesa .preco").eq(2).text())*parseFloat($(".card.sobremesa input").eq(2).val())+
                     parseFloat($(".card.sobremesa .preco").eq(3).text())*parseFloat($(".card.sobremesa input").eq(3).val())+
                     parseFloat($(".card.sobremesa .preco").eq(4).text())*parseFloat($(".card.sobremesa input").eq(4).val());
-                    alert(soma_pratos+soma_bebidas+soma_sobremesa);
+                    //alert(soma_pratos+soma_bebidas+soma_sobremesa); "Valor total do pedido="+
+                    $(".texto-resultado").text(soma_pratos+soma_bebidas+soma_sobremesa);
                 });
            });
        </script>
